@@ -34,9 +34,10 @@ function renderTask() {
     const list = document.querySelector("#todo-list");
     list.innerHTML = "";
 
-    projects[currentProject].forEach((todo, index) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
+    if (projects[currentProject]) {
+        projects[currentProject].forEach((todo, index) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
                 <strong>${todo.title}</strong>
                 <p>${todo.description || "No description"}</p>
                 <p>Deadline: ${todo.dueDate || "Unknown"}</p>
@@ -44,24 +45,27 @@ function renderTask() {
                 <p>Creation Date: ${todo.createdAt}</p>
             `;
 
-        if (todo.completed) li.classList.add("completed");
+            if (todo.completed) li.classList.add("completed");
 
-        li.addEventListener("click", () => {
-            todo.toggleComplete();
-            renderTask();
+            li.addEventListener("click", () => {
+                todo.toggleComplete();
+                renderTask();
+            });
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "❌";
+            deleteBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                projects[currentProject].splice(index, 1);
+                renderTask();
+            });
+
+            li.appendChild(deleteBtn);
+            list.appendChild(li);
         });
-
-        const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "❌";
-        deleteBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            projects[currentProject].splice(index, 1);
-            renderTask();
-        });
-
-        li.appendChild(deleteBtn);
-        list.appendChild(li);
-    });
+    } else {
+        console.error(`Project "${currentProject}" not found.`);
+    }
 }
 
 const projectAdder = document.querySelector("#add-project");
@@ -71,6 +75,7 @@ projectAdder.addEventListener("click", () => {
         projects[projectName] = [];
         document.querySelector("#new-project-name").value = "";
         renderProject();
+        renderTask();
     }
 });
 
@@ -82,7 +87,7 @@ taskAdder.addEventListener("click", () => {
     const priority = document.querySelector("#task-priority").value
     const project = document.querySelector("#task-project").value
 
-    if (title) {
+    if (title && projects[project]) {
         projects[project].push(createToDo(title, description, dueDate, priority, project));
         document.querySelector("#task-name").value = "";
         document.querySelector("#task-desc").value = "";
