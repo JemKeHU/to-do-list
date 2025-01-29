@@ -5,33 +5,53 @@ let currentProject = "Hello!";
 
 function renderProject() {
     const projectList = document.querySelector("#project-list");
-    const projectSelect = document.querySelector("#task-project");
+    const currentProjectName = document.querySelector("#current-project-name");
 
     projectList.innerHTML = "";
-    projectSelect.innerHTML = "";
 
     Object.keys(projects).forEach((projectName) => {
         const li = document.createElement("li");
         li.textContent = projectName;
-        if (projectName === currentProject) li.style.fontWight = "bold";
 
-        li.addEventListener("click", () => {
-            currentProject = projectName;
-            renderTask();
-            renderProject();
-        });
+        console.log("Creating project list item for:", projectName);
+
+        if (projectName === currentProject) {
+            li.style.fontWeight = "bold";
+            li.style.cursor = "default";
+        } else {
+            li.style.cursor = "pointer";
+            li.addEventListener("click", () => {
+                console.log("Clicked on project:", projectName);
+                console.log("Before change - Current Project:", currentProject);
+
+                currentProject = projectName;
+                currentProjectName.textContent = currentProject;
+
+                console.log("After change - Current Project:", currentProject);
+
+                renderTask();
+                renderProject();
+            });
+        }
 
         projectList.appendChild(li);
-
-        const option = document.createElement("option");
-        option.value = projectName;
-        option.textContent = projectName;
-        projectSelect.appendChild(option);
     });
 }
 
 function renderTask() {
     const list = document.querySelector("#todo-list");
+    const taskProjectSelect = document.querySelector("#task-project");
+
+    taskProjectSelect.innerHTML = "";
+    Object.keys(projects).forEach((projectName) => {
+        const option = document.createElement("option");
+        option.value = projectName;
+        option.textContent = projectName;
+        taskProjectSelect.appendChild(option);
+    });
+
+    taskProjectSelect.value = currentProject;
+
     list.innerHTML = "";
 
     if (projects[currentProject]) {
@@ -75,7 +95,6 @@ projectAdder.addEventListener("click", () => {
         projects[projectName] = [];
         document.querySelector("#new-project-name").value = "";
         renderProject();
-        renderTask();
     }
 });
 
@@ -83,12 +102,16 @@ const taskAdder = document.querySelector("#add-task");
 taskAdder.addEventListener("click", () => {
     const title = document.querySelector("#task-name").value.trim();
     const description = document.querySelector("#task-desc").value.trim();
-    const dueDate = document.querySelector("#task-date").value
-    const priority = document.querySelector("#task-priority").value
-    const project = document.querySelector("#task-project").value
+    const dueDate = document.querySelector("#task-date").value;
+    const priority = document.querySelector("#task-priority").value;
+    const project = document.querySelector("#task-project").value;
+
+    console.log("Current Project:", currentProject);
+    console.log("Selected Project:", project);
 
     if (title && projects[project]) {
-        projects[project].push(createToDo(title, description, dueDate, priority, project));
+        const newTask = createToDo(title, description, dueDate, priority, project);
+        projects[project].push(newTask);
         document.querySelector("#task-name").value = "";
         document.querySelector("#task-desc").value = "";
         document.querySelector("#task-date").value = "";
