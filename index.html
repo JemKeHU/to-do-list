@@ -7,9 +7,25 @@
 <script defer src="main.js"></script></head>
 <body>
     <h1>To-Do List</h1>
-    <input type="text" id="task" placeholder="Enter a task">
-    <button id="add-task">Add</button>
 
+    <h2>Add Project</h2>
+    <input type="text" id="new-project-name" placeholder="Enter a project">
+    <button id="add-project">Add Project</button>
+    <ul id="project-list"></ul>
+
+    <h2>Add Task</h2>
+    <input type="text" id="task-name" placeholder="Enter a task" required>
+    <input type="text" id="task-desc" placeholder="Enter a description">
+    <input type="text" id="task-date" placeholder="Enter a due date">
+    <select name="task-priority" id="task-priority">
+        <option value="low">Low</option>
+        <option value="madium">Medium</option>
+        <option value="high">High</option>
+    </select>
+    <select name="task-project" id="task-project"></select>
+    <button id="add-task">Add Task</button>
+
+    <h2>Tasks</h2>
     <ul id="todo-list"></ul>
 </body>
 </html>
