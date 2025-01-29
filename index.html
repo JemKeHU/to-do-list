@@ -4,40 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-
-        ::backdrop {
-            background: rgba(0, 0, 0, 0.5);
-        }
-    </style>
 <script defer src="main.js"></script></head>
 <body>
-    <h1>To-Do List</h1>
+    <!-- Header section with title and edit icon -->
+    <div class="header-container">
+        <h1>To-Do List</h1>
+        <img src="5458e6de5b4e9b82d93c.svg" alt="edit" width="30px">
+    </div>
     
-    <h2>Current project: <span id="current-project-name">Hello</span></h2>
-
-    <button id="add-project-btn">Add Project</button>
-    <button id="add-task-btn">Add Task</button>
-
+    <!-- Modal for adding a new project -->
     <div class="modal" id="add-project-modal">
         <h2>Add Project</h2>
         <input type="text" id="new-project-name" placeholder="Enter a project">
         <button id="submit-project">Add Project</button>
         <button class="close-btn" id="close-add-project-modal">Close</button>
     </div>
-
+    
+    <!-- Modal for editing an existing project -->
     <div class="modal" id="edit-project-modal">
         <h2>Edit Project</h2>
         <input type="text" id="edit-project-name" placeholder="Enter new project name">
@@ -45,6 +28,7 @@
         <button class="close-btn" id="close-edit-project-modal">Close</button>
     </div>
     
+    <!-- Modal for adding a new task -->
     <div class="modal" id="add-task-modal">
         <h2>Add Task</h2>
         <input type="text" id="task-name" placeholder="Enter a task" required>
@@ -59,7 +43,8 @@
         <button id="submit-task">Add Task</button>
         <button class="close-btn" id="close-add-task-modal">Close</button>
     </div>
-
+    
+    <!-- Modal for editing an existing task -->
     <div class="modal" id="edit-task-modal">
         <h2>Edit Task</h2>
         <input type="text" id="edit-task-name" placeholder="Enter task name">
@@ -78,8 +63,20 @@
         <button class="close-btn" id="close-edit-task-modal">Close</button>
     </div>
 
-    <ul id="project-list"></ul>
-    <h2>Tasks</h2>
-    <ul id="todo-list"></ul>
+    <!-- Main content area -->
+    <div class="body-container">
+        <div class="left-container">
+            <!-- Button to add new project -->
+            <button id="add-project-btn">Add Project</button>
+            <h2>Current project: <span id="current-project-name"></span></h2>
+            <ul id="project-list"></ul> <!-- List of projects -->
+        </div>
+        <div class="right-container">
+            <!-- Button to add new task -->
+            <button id="add-task-btn" class="">Add Task</button>
+            <h2>Tasks</h2>
+            <ul id="todo-list"></ul> <!-- List of tasks -->
+        </div>
+    </div>
 </body>
 </html>
