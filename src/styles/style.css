@@ -1,213 +1,215 @@
 /* Body styles */
 body {
-    font-family: Arial, sans-serif; /* Set font family */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-color: #f4f4f9; /* Set background color */
-    height: 100vh; /* Make the body take full height of the viewport */
-    overflow: hidden; /* Prevent scrollbars */
+  font-family: Arial, sans-serif; /* Set font family */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #f4f4f9; /* Set background color */
+  height: 100vh; /* Make the body take full height of the viewport */
+  overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Header styles */
-h1, h2 {
-    color: #333; /* Set text color */
-    text-align: center; /* Center align text */
+h1,
+h2 {
+  color: #333; /* Set text color */
+  text-align: center; /* Center align text */
 }
 
 /* Project list styles */
 #project-list {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
 }
 
 #project-list li {
-    padding: 10px; /* Add padding to each list item */
-    background-color: #fff; /* Set background color */
-    margin: 5px 0; /* Add vertical margin */
-    border-radius: 4px; /* Round the corners */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s; /* Smooth background color change */
+  padding: 10px; /* Add padding to each list item */
+  background-color: #fff; /* Set background color */
+  margin: 5px 0; /* Add vertical margin */
+  border-radius: 4px; /* Round the corners */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth background color change */
 }
 
 #project-list li:hover {
-    background-color: #e0e0e0; /* Change background on hover */
+  background-color: #e0e0e0; /* Change background on hover */
 }
 
 #project-list li button {
-    background: transparent; /* Make button background transparent */
-    border: none; /* Remove border */
-    cursor: pointer; /* Change cursor to pointer */
-    color: #555; /* Set button color */
-    font-size: 1.2em; /* Set button font size */
+  background: transparent; /* Make button background transparent */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  color: #555; /* Set button color */
+  font-size: 1.2em; /* Set button font size */
 }
 
 #project-list li button:hover {
-    color: #ff6347; /* Change button color on hover */
+  color: #ff6347; /* Change button color on hover */
 }
 
 /* Current project name style */
 #current-project-name {
-    font-weight: bold; /* Make project name bold */
+  font-weight: bold; /* Make project name bold */
 }
 
 /* Todo list styles */
 #todo-list {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
 }
 
 #todo-list li {
-    padding: 10px; /* Add padding to each list item */
-    background-color: #fff; /* Set background color */
-    margin: 5px 0; /* Add vertical margin */
-    border-radius: 4px; /* Round the corners */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out content */
-    align-items: center; /* Align items to the center */
+  padding: 10px; /* Add padding to each list item */
+  background-color: #fff; /* Set background color */
+  margin: 5px 0; /* Add vertical margin */
+  border-radius: 4px; /* Round the corners */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out content */
+  align-items: center; /* Align items to the center */
 }
 
 #todo-list li.completed {
-    background-color: #d3ffd3; /* Change background color for completed tasks */
+  background-color: #d3ffd3; /* Change background color for completed tasks */
 }
 
 #todo-list li button {
-    background: transparent; /* Make button background transparent */
-    border: none; /* Remove border */
-    cursor: pointer; /* Change cursor to pointer */
-    color: #555; /* Set button color */
+  background: transparent; /* Make button background transparent */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  color: #555; /* Set button color */
 }
 
 #todo-list li button:hover {
-    color: #ff6347; /* Change button color on hover */
+  color: #ff6347; /* Change button color on hover */
 }
 
 /* Header container styles */
 .header-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center align content */
-    align-items: center; /* Align items to the center */
-    padding: 1rem; /* Add padding */
-    background-color: #fff; /* Set background color */
-    color: #fff; /* Set text color */
-    flex-direction: row; /* Align items horizontally */
-    border-bottom: rgb(194, 184, 184) 4px solid; /* Add border at the bottom */
-    gap: 15px; /* Add gap between items */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center align content */
+  align-items: center; /* Align items to the center */
+  padding: 1rem; /* Add padding */
+  background-color: #fff; /* Set background color */
+  color: #fff; /* Set text color */
+  flex-direction: row; /* Align items horizontally */
+  border-bottom: rgb(194, 184, 184) 4px solid; /* Add border at the bottom */
+  gap: 15px; /* Add gap between items */
 }
 
 /* Add project button styles */
 #add-project-btn {
-    background-color: #f1356d; /* Set background color */
-    color: #fff; /* Set text color */
-    border: none; /* Remove border */
-    padding: 0.5rem 1rem; /* Add padding */
-    font-size: 1.2rem; /* Set font size */
-    cursor: pointer; /* Change cursor to pointer */
-    border-radius: 15%; /* Round button corners */
+  background-color: #f1356d; /* Set background color */
+  color: #fff; /* Set text color */
+  border: none; /* Remove border */
+  padding: 0.5rem 1rem; /* Add padding */
+  font-size: 1.2rem; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 15%; /* Round button corners */
 }
 
 /* Main body container styles */
 .body-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center align content */
-    height: 100vh; /* Make container full height */
-    flex-direction: row; /* Align items horizontally */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center align content */
+  height: 100vh; /* Make container full height */
+  flex-direction: row; /* Align items horizontally */
 }
 
 /* Left container styles */
 .left-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: start; /* Align items to the start */
-    align-items: center; /* Align items to the center */
-    flex-direction: column; /* Stack items vertically */
-    width: 20%; /* Set width */
-    padding: 1rem; /* Add padding */
-    background-color: #fff; /* Set background color */
-    border-right: rgb(194, 184, 184) 4px solid; /* Add right border */
+  display: flex; /* Use flexbox for layout */
+  justify-content: start; /* Align items to the start */
+  align-items: center; /* Align items to the center */
+  flex-direction: column; /* Stack items vertically */
+  width: 20%; /* Set width */
+  padding: 1rem; /* Add padding */
+  background-color: #fff; /* Set background color */
+  border-right: rgb(194, 184, 184) 4px solid; /* Add right border */
 }
 
 /* Right container styles */
 .right-container {
-    width: 80%; /* Set width */
-    padding: 1rem; /* Add padding */
-    display: flex; /* Use flexbox for layout */
-    justify-content: flex-start; /* Align items to the start */
-    flex-direction: column; /* Stack items vertically */
+  width: 80%; /* Set width */
+  padding: 1rem; /* Add padding */
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-start; /* Align items to the start */
+  flex-direction: column; /* Stack items vertically */
 }
 
 /* Modal styles */
 .modal {
-    display: none;  /* Hide modal by default */
-    position: fixed !important; /* Fix modal position */
-    top: 50% !important; /* Center modal vertically */
-    left: 50% !important; /* Center modal horizontally */
-    transform: translate(-50%, -50%) !important; /* Adjust positioning */
-    width: 400px;  /* Set modal width */
-    max-height: 90vh; /* Limit modal height */
-    background-color: white !important; /* Set background color */
-    padding: 20px; /* Add padding */
-    border-radius: 10px; /* Round modal corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-    z-index: 1000;  /* Set modal on top of other content */
-    text-align: center; /* Center text */
-    overflow-y: auto;  /* Enable vertical scroll */
-    flex-direction: column; /* Stack content vertically */
+  display: none; /* Hide modal by default */
+  position: fixed !important; /* Fix modal position */
+  top: 50% !important; /* Center modal vertically */
+  left: 50% !important; /* Center modal horizontally */
+  transform: translate(-50%, -50%) !important; /* Adjust positioning */
+  width: 400px; /* Set modal width */
+  max-height: 90vh; /* Limit modal height */
+  background-color: white !important; /* Set background color */
+  padding: 20px; /* Add padding */
+  border-radius: 10px; /* Round modal corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  z-index: 1000; /* Set modal on top of other content */
+  text-align: center; /* Center text */
+  overflow-y: auto; /* Enable vertical scroll */
+  flex-direction: column; /* Stack content vertically */
 }
 
 /* Modal button styles */
 .modal button {
-    width: 100%; /* Make button take full width */
-    padding: 10px; /* Add padding */
-    background-color: #f1356d; /* Set background color */
-    color: white; /* Set text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Round button corners */
-    cursor: pointer; /* Change cursor to pointer */
-    font-size: 1.2rem; /* Set font size */
-    margin-top: 10px; /* Add margin */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+  width: 100%; /* Make button take full width */
+  padding: 10px; /* Add padding */
+  background-color: #f1356d; /* Set background color */
+  color: white; /* Set text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round button corners */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 1.2rem; /* Set font size */
+  margin-top: 10px; /* Add margin */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 .modal button:hover {
-    background-color: #e02455; /* Change background color on hover */
+  background-color: #e02455; /* Change background color on hover */
 }
 
 /* Input and select styles in modal */
-.modal input, .modal select {
-    width: 100%;  /* Make input/select take full width */
-    padding: 10px; /* Add padding */
-    margin: 10px 0; /* Add margin */
-    border-radius: 5px; /* Round corners */
-    border: 1px solid #ccc; /* Set border */
-    font-size: 1rem; /* Set font size */
+.modal input,
+.modal select {
+  width: 100%; /* Make input/select take full width */
+  padding: 10px; /* Add padding */
+  margin: 10px 0; /* Add margin */
+  border-radius: 5px; /* Round corners */
+  border: 1px solid #ccc; /* Set border */
+  font-size: 1rem; /* Set font size */
 }
 
 /* Close button styles */
 .close-btn {
-    background-color: transparent; /* Transparent background */
-    border: none; /* Remove border */
-    color: #f1356d; /* Set color */
-    font-size: 1.5rem; /* Set font size */
-    cursor: pointer; /* Change cursor to pointer */
-    margin-top: 10px; /* Add margin */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove border */
+  color: #f1356d; /* Set color */
+  font-size: 1.5rem; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer */
+  margin-top: 10px; /* Add margin */
 }
 
 .close-btn:hover {
-    color: #ff6347; /* Change color on hover */
+  color: #ff6347; /* Change color on hover */
 }
 
 /* Add task button styles */
 #add-task-btn {
-    background-color: #f1356d; /* Set background color */
-    color: #fff; /* Set text color */
-    border: none; /* Remove border */
-    padding: 0.5rem 1rem; /* Add padding */
-    font-size: 1.2rem; /* Set font size */
-    cursor: pointer; /* Change cursor to pointer */
-    border-radius: 15%; /* Round button corners */
+  background-color: #f1356d; /* Set background color */
+  color: #fff; /* Set text color */
+  border: none; /* Remove border */
+  padding: 0.5rem 1rem; /* Add padding */
+  font-size: 1.2rem; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 15%; /* Round button corners */
 }
 
 /* Hover effect for add task and add project buttons */
 #add-task-btn:hover,
 #add-project-btn:hover {
-    background-color: #e02455; /* Change background on hover */
+  background-color: #e02455; /* Change background on hover */
 }

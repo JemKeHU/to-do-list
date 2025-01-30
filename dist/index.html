@@ -1,82 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
-<script defer src="main.js"></script></head>
-<body>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
     <!-- Header section with title and edit icon -->
     <div class="header-container">
-        <h1>To-Do List</h1>
-        <img src="5458e6de5b4e9b82d93c.svg" alt="edit" width="30px">
+      <h1>To-Do List</h1>
+      <img src="5458e6de5b4e9b82d93c.svg" alt="edit" width="30px" />
     </div>
-    
+
     <!-- Modal for adding a new project -->
     <div class="modal" id="add-project-modal">
-        <h2>Add Project</h2>
-        <input type="text" id="new-project-name" placeholder="Enter a project">
-        <button id="submit-project">Add Project</button>
-        <button class="close-btn" id="close-add-project-modal">Close</button>
+      <h2>Add Project</h2>
+      <input type="text" id="new-project-name" placeholder="Enter a project" />
+      <button id="submit-project">Add Project</button>
+      <button class="close-btn" id="close-add-project-modal">Close</button>
     </div>
-    
+
     <!-- Modal for editing an existing project -->
     <div class="modal" id="edit-project-modal">
-        <h2>Edit Project</h2>
-        <input type="text" id="edit-project-name" placeholder="Enter new project name">
-        <button id="submit-edit-project">Save Changes</button>
-        <button class="close-btn" id="close-edit-project-modal">Close</button>
+      <h2>Edit Project</h2>
+      <input
+        type="text"
+        id="edit-project-name"
+        placeholder="Enter new project name"
+      />
+      <button id="submit-edit-project">Save Changes</button>
+      <button class="close-btn" id="close-edit-project-modal">Close</button>
     </div>
-    
+
     <!-- Modal for adding a new task -->
     <div class="modal" id="add-task-modal">
-        <h2>Add Task</h2>
-        <input type="text" id="task-name" placeholder="Enter a task" required>
-        <input type="text" id="task-desc" placeholder="Enter a description">
-        <input type="date" id="task-date">
-        <select name="task-priority" id="task-priority">
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-        </select>
-        <select name="task-project" id="task-project"></select>
-        <button id="submit-task">Add Task</button>
-        <button class="close-btn" id="close-add-task-modal">Close</button>
+      <h2>Add Task</h2>
+      <input type="text" id="task-name" placeholder="Enter a task" required />
+      <input type="text" id="task-desc" placeholder="Enter a description" />
+      <input type="date" id="task-date" />
+      <select name="task-priority" id="task-priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <select name="task-project" id="task-project"></select>
+      <button id="submit-task">Add Task</button>
+      <button class="close-btn" id="close-add-task-modal">Close</button>
     </div>
-    
+
     <!-- Modal for editing an existing task -->
     <div class="modal" id="edit-task-modal">
-        <h2>Edit Task</h2>
-        <input type="text" id="edit-task-name" placeholder="Enter task name">
-        <input type="text" id="edit-task-desc" placeholder="Enter description">
-        <input type="date" id="edit-task-date">
-        <select id="edit-task-priority">
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-        </select>
-        <label>
-            Completed:
-            <input type="checkbox" id="edit-task-completed">
-        </label>
-        <button id="submit-edit-task">Save Changes</button>
-        <button class="close-btn" id="close-edit-task-modal">Close</button>
+      <h2>Edit Task</h2>
+      <input type="text" id="edit-task-name" placeholder="Enter task name" />
+      <input type="text" id="edit-task-desc" placeholder="Enter description" />
+      <input type="date" id="edit-task-date" />
+      <select id="edit-task-priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <label>
+        Completed:
+        <input type="checkbox" id="edit-task-completed" />
+      </label>
+      <button id="submit-edit-task">Save Changes</button>
+      <button class="close-btn" id="close-edit-task-modal">Close</button>
     </div>
 
     <!-- Main content area -->
     <div class="body-container">
-        <div class="left-container">
-            <!-- Button to add new project -->
-            <button id="add-project-btn">Add Project</button>
-            <h2>Current project: <span id="current-project-name"></span></h2>
-            <ul id="project-list"></ul> <!-- List of projects -->
-        </div>
-        <div class="right-container">
-            <!-- Button to add new task -->
-            <button id="add-task-btn" class="">Add Task</button>
-            <h2>Tasks</h2>
-            <ul id="todo-list"></ul> <!-- List of tasks -->
-        </div>
+      <div class="left-container">
+        <!-- Button to add new project -->
+        <button id="add-project-btn">Add Project</button>
+        <h2>Current project: <span id="current-project-name"></span></h2>
+        <ul id="project-list"></ul>
+        <!-- List of projects -->
+      </div>
+      <div class="right-container">
+        <!-- Button to add new task -->
+        <button id="add-task-btn" class="">Add Task</button>
+        <h2>Tasks</h2>
+        <ul id="todo-list"></ul>
+        <!-- List of tasks -->
+      </div>
     </div>
-</body>
+  </body>
 </html>
